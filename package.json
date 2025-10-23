@@ -1,0 +1,20 @@
+{
+  "name": "testrepo",
+  "version": "1.0.0",
+  "description": "A test repository - Sprint Capacity Planning Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "dev": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["sprint", "capacity", "planning", "agile"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
