@@ -11,10 +11,6 @@ const Dashboard = () => {
 
   const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
-  useEffect(() => {
-    fetchData();
-  }, [filter]);
-
   const fetchData = async () => {
     try {
       setLoading(true);
@@ -46,6 +42,11 @@ const Dashboard = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter]);
 
   return (
     <div className="dashboard">
