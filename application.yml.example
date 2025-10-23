@@ -1,0 +1,28 @@
+# Example configuration file for Jira Allocation API
+# Copy this file to src/main/resources/application.yml and update with your credentials
+
+server:
+  port: 8080
+
+jira:
+  api:
+    # Your Jira instance URL (e.g., https://your-company.atlassian.net)
+    base-url: https://your-domain.atlassian.net
+    
+    # Jira API token (generate from: https://id.atlassian.com/manage-profile/security/api-tokens)
+    api-token: your-api-token-here
+    
+    # Email address associated with your Jira account
+    email: your-email@example.com
+    
+    # Jira REST API version (default: 3)
+    version: 3
+
+spring:
+  application:
+    name: jira-allocation-api
+
+logging:
+  level:
+    com.example.jira: INFO
+    org.springframework.web: INFO

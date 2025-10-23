@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+jira:
+  api:
+    base-url: ${JIRA_API_BASE_URL:https://your-domain.atlassian.net}
+    api-token: ${JIRA_API_TOKEN:your-api-token}
+    email: ${JIRA_EMAIL:your-email@example.com}
+    version: 3
+
+spring:
+  application:
+    name: jira-allocation-api
+
+logging:
+  level:
+    com.example.jira: INFO
+    org.springframework.web: INFO
