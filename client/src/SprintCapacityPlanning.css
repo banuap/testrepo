@@ -1,0 +1,189 @@
+.sprint-capacity-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+h3 {
+  color: #34495e;
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+
+.message {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.team-members-section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.team-member-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.member-name {
+  flex: 2;
+}
+
+.member-hours {
+  flex: 1;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #7f8c8d;
+}
+
+.btn-add {
+  background-color: #27ae60;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  background-color: #229954;
+}
+
+.btn-remove {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+}
+
+.btn-remove:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.capacity-summary {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.total-hours {
+  color: #27ae60;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .sprint-capacity-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .team-member-row {
+    flex-direction: column;
+  }
+
+  .member-name,
+  .member-hours {
+    width: 100%;
+  }
+
+  .btn-remove {
+    width: 100%;
+  }
+}
