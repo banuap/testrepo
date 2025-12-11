@@ -4,15 +4,16 @@ import './Login.css';
 function Login() {
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
+    rememberMe: false
   });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     });
     // Clear error when user starts typing
     if (errors[name]) {
@@ -93,7 +94,12 @@ function Login() {
           
           <div className="form-options">
             <label className="remember-me">
-              <input type="checkbox" />
+              <input 
+                type="checkbox" 
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={handleChange}
+              />
               <span>Remember me</span>
             </label>
             <a href="#forgot" className="forgot-password">Forgot password?</a>
