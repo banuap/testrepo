@@ -50,7 +50,8 @@ function Login() {
       setErrors(newErrors);
     } else {
       // Handle successful login
-      console.log('Login successful', formData);
+      // In a real application, this would send credentials to a backend API
+      // console.log('Login successful', formData); // Removed to prevent exposing sensitive data
       alert('Login successful!');
     }
   };
