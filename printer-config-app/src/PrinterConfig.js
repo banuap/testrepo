@@ -37,14 +37,25 @@ function PrinterConfig() {
     
     if (!printerData.ipAddress.trim()) {
       newErrors.ipAddress = 'IP address is required';
-    } else if (!/^(\d{1,3}\.){3}\d{1,3}$/.test(printerData.ipAddress)) {
-      newErrors.ipAddress = 'Invalid IP address format';
+    } else {
+      const ipParts = printerData.ipAddress.split('.');
+      if (ipParts.length !== 4 || !ipParts.every(part => {
+        const num = parseInt(part, 10);
+        return num >= 0 && num <= 255 && part === num.toString();
+      })) {
+        newErrors.ipAddress = 'Invalid IP address format';
+      }
     }
     
     if (!printerData.port.trim()) {
       newErrors.port = 'Port is required';
     } else if (!/^\d+$/.test(printerData.port)) {
       newErrors.port = 'Port must be a number';
+    } else {
+      const portNum = parseInt(printerData.port, 10);
+      if (portNum < 1 || portNum > 65535) {
+        newErrors.port = 'Port must be between 1 and 65535';
+      }
     }
     
     if (!printerData.model.trim()) {
