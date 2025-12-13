@@ -78,6 +78,20 @@ npm start
 
 The React app will start on `http://localhost:3000` and automatically open in your browser.
 
+### Configuration
+
+**Backend Port:**
+Set the `PORT` environment variable to change the backend port (default: 5000):
+```bash
+PORT=8080 npm start
+```
+
+**Frontend API URL:**
+Set the `REACT_APP_API_URL` environment variable to configure the backend API URL (default: http://localhost:5000):
+```bash
+REACT_APP_API_URL=http://localhost:8080 npm start
+```
+
 ## Testing the Login
 
 ### Test Credentials

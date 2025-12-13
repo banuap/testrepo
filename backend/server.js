@@ -9,16 +9,17 @@ app.use(cors());
 app.use(express.json());
 
 // Mock user data (in a real application, this would be in a database)
+// WARNING: Passwords stored as PLAINTEXT - NOT suitable for production!
 const users = [
   {
     id: 1,
     email: 'user@example.com',
-    password: 'password123' // In production, passwords should be hashed
+    password: 'password123' // PLAINTEXT_PASSWORD - must be hashed in production (e.g., bcrypt)
   },
   {
     id: 2,
     email: 'admin@example.com',
-    password: 'admin123'
+    password: 'admin123' // PLAINTEXT_PASSWORD - must be hashed in production (e.g., bcrypt)
   }
 ];
 
